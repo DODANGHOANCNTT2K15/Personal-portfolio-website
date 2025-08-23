@@ -1,0 +1,78 @@
+/* Thanh nav nổi */
+nav {
+    position: fixed;
+    top: 35px;               /* cách top 10px */
+    left: 50%;               /* canh giữa ngang */
+    transform: translateX(-50%);
+
+    width: cover;              /* chiếm 70% chiều rộng */
+    height: 20px;
+    background-color: #0F2E25; /* nền xanh đậm */
+    padding: 12px 20px;
+
+    display: flex;
+    justify-content: center;
+
+    border-radius: 10px;      /* bo góc 5px */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+/* Danh sách menu */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    gap: 30px;               /* khoảng cách giữa các item */
+}
+
+/* Item menu */
+nav ul li {
+    display: inline-block;
+}
+
+/* Link */
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;          /* chữ trắng */
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+nav ul li a:hover {
+    background-color: #1E3D34; /* nền xanh rêu nhạt */
+    color: #D4B07A;           /* chữ vàng nhạt */
+}
+
+#logo {
+    height: 30px;
+    width: cover;
+    padding: 0 10px;
+    position: fixed;
+    top: 10px; /* cách top 10px */
+    left: 50%; /* canh giữa ngang */
+    transform: translateX(-50%);
+    background-color: #0F2E25;
+    z-index: 1000;
+
+    /* Chỉ bo góc trên trái và trên phải */
+    border-top-left-radius: 5px;   /* điều chỉnh bán kính theo ý muốn */
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
