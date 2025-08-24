@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Thanh nav nổi */
 nav {
     position: fixed;
@@ -6,7 +12,7 @@ nav {
     transform: translateX(-50%);
 
     width: cover;              /* chiếm 70% chiều rộng */
-    height: 20px;
+    height: cover;
     background-color: #0F2E25; /* nền xanh đậm */
     padding: 12px 20px;
 
@@ -14,7 +20,7 @@ nav {
     justify-content: center;
 
     border-radius: 10px;      /* bo góc 5px */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 999;
 }
 
@@ -25,7 +31,7 @@ nav ul {
     padding: 0;
 
     display: flex;
-    gap: 30px;               /* khoảng cách giữa các item */
+    gap: 20px;               /* khoảng cách giữa các item */
 }
 
 /* Item menu */
@@ -41,8 +47,8 @@ nav ul li a {
     font-weight: 500;
 
     padding: 8px 15px;
-    border-radius: 6px;
     transition: all 0.3s ease;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 /* Hover */
@@ -60,7 +66,7 @@ nav ul li a:hover {
     left: 50%; /* canh giữa ngang */
     transform: translateX(-50%);
     background-color: #0F2E25;
-    z-index: 1000;
+    z-index: 998;
 
     /* Chỉ bo góc trên trái và trên phải */
     border-top-left-radius: 5px;   /* điều chỉnh bán kính theo ý muốn */
@@ -72,7 +78,17 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     color: whitesmoke;
+}
+
+#logo-text{
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 1rem;
+}
+
+nav ul li a.active {
+  color: #d4b07a;     /* đổi màu chữ */
+  font-weight: bold;  /* chữ đậm */
+  border-bottom: 2px solid #d4b07a; /* gạch dưới */
 }

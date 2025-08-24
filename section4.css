@@ -1,0 +1,8 @@
+#section4{
+    background-color: rgb(94, 54, 160);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

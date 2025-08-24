@@ -1,0 +1,30 @@
+/* Tạo animation rung */
+@keyframes shake {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  20%  { transform: translate(-5px, 0) rotate(-3deg); }
+  40%  { transform: translate(5px, 0) rotate(3deg); }
+  60%  { transform: translate(-5px, 0) rotate(-3deg); }
+  80%  { transform: translate(5px, 0) rotate(3deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Class để kích hoạt hiệu ứng */
+.shake {
+  animation: shake 0.5s;
+}
+
+#card_index {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#card_index:hover {
+    transform: scale(1.1); /* hoặc giá trị bạn muốn */
+}
+
+#card_index{
+    position: absolute;
+    top: -300px;
+    filter: drop-shadow(10px 15px 10px rgba(0, 0, 0, 0.5));
+}
