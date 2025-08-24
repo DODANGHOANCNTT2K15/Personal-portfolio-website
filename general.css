@@ -11,3 +11,18 @@
 body{
     background-color: beige;
 }
+
+a{
+    user-select: none;      /* không thể bôi đen */
+    -webkit-user-drag: none; /* Chrome/Safari */
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;      /* ngăn kéo thả */
+}
+
+img{
+    -webkit-user-drag: none; /* Chrome, Safari */
+    -moz-user-drag: none;    /* Firefox */
+    -ms-user-drag: none;     /* Edge */
+    user-select: none;
+}

@@ -1,8 +1,39 @@
 #section6{
-    background-color: rgb(197, 185, 21);
+    /* background-color: rgb(197, 185, 21); */
+
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#section6 {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* khoảng cách giữa các icon */
+    margin-top: 20px;
+}
+
+.contact-icons a img {
+    width: 50px;      /* điều chỉnh kích thước icon */
+    height: 50px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* hover nhẹ */
+.contact-icons a img:hover {
+    transform: scale(1.2);
+}
+
+#section6 h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    color: #333;
 }
