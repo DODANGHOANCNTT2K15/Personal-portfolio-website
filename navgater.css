@@ -92,3 +92,8 @@ nav ul li a.active {
   font-weight: bold;  /* chữ đậm */
   border-bottom: 2px solid #d4b07a; /* gạch dưới */
 }
+
+
+html {
+  scroll-behavior: smooth;
+}

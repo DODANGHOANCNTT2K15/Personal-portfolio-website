@@ -28,3 +28,41 @@ const observer = new IntersectionObserver(
 
 // observe tất cả section
 sections.forEach((section) => observer.observe(section));
+
+function smoothScrollTo(target, duration = 1500) {
+  const start = window.scrollY;
+  const end = target.getBoundingClientRect().top + window.scrollY;
+  const distance = end - start;
+  let startTime = null;
+
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  function animation(currentTime) {
+    if (!startTime) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+
+    // dùng easing
+    const easedProgress = easeOutCubic(progress);
+
+    const run = start + distance * easedProgress;
+    window.scrollTo(0, run);
+
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  requestAnimationFrame(animation);
+}
+
+
+// áp dụng cho nav link
+document.querySelectorAll("nav ul li a").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const id = link.getAttribute("href").substring(1);
+    const target = document.getElementById(id);
+    if (target) smoothScrollTo(target, 180); // 180ms = 0.18s
+  });
+});

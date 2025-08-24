@@ -1,8 +1,121 @@
 #section1{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    padding: 0 10%;
 }
+
+#section1>div{
+    /* background-color: red; */
+    width: 62%;
+    height: auto;
+}
+
+#section1>div>h1,
+#section1>div>h2,
+#section1>div>p {
+    /* margin-bottom: 20px; */
+    padding: 0;
+}
+
+#section1 > div > h1 {
+    position: relative; /* để span bám theo */
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Bebas Neue', cursive;
+    padding: 5px 10px;
+    border: 1px solid black;
+    width: fit-content;
+    margin-left: 5px;
+}
+
+#section1 > div > h1 .corner {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: orange;
+    border: 1px solid black;
+}
+
+/* các góc */
+#section1 > div > h1 .tl { top: -6px; left: -6px; }
+#section1 > div > h1 .tr { top: -6px; right: -6px; }
+#section1 > div > h1 .bl { bottom: -6px; left: -6px; }
+#section1 > div > h1 .br { bottom: -6px; right: -6px; }
+
+
+#section1>div h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    border-right: 3px solid orange; /* con trỏ nháy */
+    display: inline-block;
+    animation: blink 0.7s step-end infinite;
+    min-height: 1em; /* giữ chiều cao dòng */
+}
+
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+#section1 > div p {
+    font-size: 1rem;          /* chữ nhỏ hơn tiêu đề */
+    font-weight: 300;           /* chữ mảnh nhẹ */
+    line-height: 1.8;           /* thoáng hơn, dễ đọc */
+    color: #555;                /* màu xám nhẹ thay vì đen */
+    max-width: 700px;           /* giới hạn chiều rộng để dễ đọc */
+        /* cách trên 1 chút */
+    font-family: 'Roboto', sans-serif; /* font hiện đại, dễ đọc */
+    text-align: justify; /* canh đều hai bên */
+}
+
+#section1 > div p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1.2s; /* xuất hiện sau tiêu đề */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#contact_section1 {
+    display: inline-block;           /* để padding áp dụng đúng */
+    padding: 10px 20px;
+    background: #145A32; /* xanh lá đậm */
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;           /* bỏ gạch chân mặc định của <a> */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-top: 20px;
+}
+
+/* Hover */
+#contact_section1:hover {
+    background: #F5B041; /* vàng cam nhạt */
+    color: #1C2833;      /* chữ sậm để dễ đọc */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Active (click) */
+#contact_section1:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+
