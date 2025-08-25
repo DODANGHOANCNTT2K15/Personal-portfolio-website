@@ -1,8 +1,87 @@
-#section5{
-    background-color: rgb(184, 43, 153);
-    height: 100vh;
+/* Section Projects */
+#section5 {
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    padding-top: 80px;
+}
+
+/* Container chia layout */
+.projects-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Sidebar trái */
+.projects-sidebar {
+    width: 20%;
+    padding: 20px;
+    border-right: 2px solid #145A32;
+}
+
+.projects-sidebar h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #222;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* Nội dung phải */
+.projects-content {
+    width: 80%;
+    padding: 10px 20px;
+}
+
+/* Category */
+.project-category {
+    margin-bottom: 40px;
+}
+
+.project-category h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #444;
+    border-left: 4px solid #145A32;
+    padding-left: 10px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* Danh sách project */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    gap: 20px;
+}
+
+/* Card project */
+.project-card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-title {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Hover hiệu ứng */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }

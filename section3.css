@@ -1,8 +1,51 @@
 #section3{
-    background-color: rgb(95, 170, 170);
+    /* background-color: rgb(95, 170, 170); */
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+#section3 h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: "Bebas Neue", cursive;
+}
+
+#section3 img {
+    height: auto;
+    transform: scaleX(-1); /* lật ngang */
+}
+
+#section3 div:first-child{
+    margin-right: 50px;
+}
+
+#section3 div:last-child{
+    padding: 20px 50px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;    
+    box-sizing: border-box;
+}
+
+#section3 div:last-child p {
+    font-size: 1rem;    
+    font-weight: 300;  
+    line-height: 1.8;    
+    color: #555;   
+    max-width: 700px;  
+    font-family: 'Roboto', sans-serif; 
+}
+
+.fade-item {
+    opacity: 0;
+    transform: translateX(-100px); 
+    transition: all 1s ease-out;
+}
+
+.fade-item.show {
+    opacity: 1;
+    transform: translateX(0);
 }

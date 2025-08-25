@@ -1,8 +1,86 @@
-#section4{
-    background-color: rgb(94, 54, 160);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Section */
+#section4 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  color: #333;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 100px;
+}
+
+/* Title */
+#section4 h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 48px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  letter-spacing: 2px;
+  color: #333;
+}
+
+/* Layout dọc */
+#section4 .skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Card */
+#section4 .skill-category {
+  background: #fff; /* nổi bật trên beige */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+/* Hover */
+#section4 .skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Category Title */
+#section4 .skill-category h3 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #145A32; /* xanh pastel */
+  border-left: 5px solid #e07a5f;
+  padding-left: 10px;
+}
+
+/* List */
+#section4 .skill-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#section4 .skill-category li {
+  font-size: 16px;
+  padding: 8px 15px;
+  background: #fefcf9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon */
+#section4 .skill-category li img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }

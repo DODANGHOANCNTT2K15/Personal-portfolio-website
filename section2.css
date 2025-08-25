@@ -1,8 +1,50 @@
 #section2{
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     height: 100vh;
     display: flex;
-    flex-direction: column;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 50px;
+}
+
+/* bên trái cố định */
+.education-item.left {
+    flex: 1;
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.5rem;
+}
+
+/* bên phải logo */
+.education-logo.right {
+    flex: 1;
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.education-logo img {
+    max-width: 50vw;
+    opacity: 0;
+    transform: translateX(100px); 
+    transition: all 1s ease-out;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+}
+
+/* khi hiện */
+.education-logo.show img {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.gpa {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ca5506; /* xanh lá đậm chủ đạo của bạn */
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
