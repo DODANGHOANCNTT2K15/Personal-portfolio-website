@@ -1,11 +1,28 @@
 /* Tạo animation rung */
 @keyframes shake {
-  0%   { transform: translate(0, 0) rotate(0deg); }
-  20%  { transform: translate(-5px, 0) rotate(-3deg); }
-  40%  { transform: translate(5px, 0) rotate(3deg); }
-  60%  { transform: translate(-5px, 0) rotate(-3deg); }
-  80%  { transform: translate(5px, 0) rotate(3deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(-5px, 0) rotate(-3deg);
+  }
+
+  40% {
+    transform: translate(5px, 0) rotate(3deg);
+  }
+
+  60% {
+    transform: translate(-5px, 0) rotate(-3deg);
+  }
+
+  80% {
+    transform: translate(5px, 0) rotate(3deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
 }
 
 /* Class để kích hoạt hiệu ứng */
@@ -14,21 +31,47 @@
 }
 
 #card_index {
-    transform: scale(1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 #card_index:hover {
-    transform: scale(1.1); /* hoặc giá trị bạn muốn */
+  transform: scale(1.1);
+  /* hoặc giá trị bạn muốn */
 }
 
-#card_index{
-    position: absolute;
-    top: -300px;
-    filter: drop-shadow(10px 15px 10px rgba(0, 0, 0, 0.5));
-    -webkit-user-drag: none; /* Chrome, Safari */
-    -moz-user-drag: none;    /* Firefox */
-    -ms-user-drag: none;     /* Edge */
-    user-select: none;
+#card_index {
+  position: absolute;
+  top: -300px;
+  filter: drop-shadow(10px 15px 10px rgba(0, 0, 0, 0.5));
+  -webkit-user-drag: none;
+  /* Chrome, Safari */
+  -moz-user-drag: none;
+  /* Firefox */
+  -ms-user-drag: none;
+  /* Edge */
+  user-select: none;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 500px) {
+  #card_index {
+    position: relative;
+    /* không còn absolute */
+    top: -50px;
+    /* nếu muốn khoảng cách so với nội dung trên */
+    width: 100%;
+    /* chiếm gần hết chiều ngang */
+    max-width: 400px;
+    /* giới hạn kích thước */
+    margin: 20px auto;
+    margin-bottom: 0px;
+    /* căn giữa */
+    transition: transform 0.3s ease;
+  }
+
+  #card_index:hover {
+    transform: scale(1.1);
+  }
 }

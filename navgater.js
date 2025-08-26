@@ -66,3 +66,11 @@ document.querySelectorAll("nav ul li a").forEach(link => {
     if (target) smoothScrollTo(target, 180); // 180ms = 0.18s
   });
 });
+
+// JS gọn để toggle menu
+const toggle = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-list');
+
+toggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});

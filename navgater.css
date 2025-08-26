@@ -1,21 +1,18 @@
-
-
-/* Thanh nav nổi */
+/* =========================== */
+/* Nav chung                  */
+/* =========================== */
 nav {
     position: fixed;
-    top: 35px;               /* cách top 10px */
-    left: 50%;               /* canh giữa ngang */
+    top: 35px;
+    left: 50%;
     transform: translateX(-50%);
-
-    width: cover;              /* chiếm 70% chiều rộng */
-    height: cover;
-    background-color: #0F2E25; /* nền xanh đậm */
+    width: cover;
+    background-color: #0F2E25;
     padding: 12px 20px;
-
     display: flex;
     justify-content: center;
-
-    border-radius: 10px;      /* bo góc 5px */
+    align-items: center;
+    border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 999;
 }
@@ -25,9 +22,8 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-
     display: flex;
-    gap: 20px;               /* khoảng cách giữa các item */
+    gap: 20px;
 }
 
 /* Item menu */
@@ -38,10 +34,9 @@ nav ul li {
 /* Link */
 nav ul li a {
     text-decoration: none;
-    color: #ffffff;          /* chữ trắng */
+    color: #ffffff;
     font-size: 16px;
     font-weight: 500;
-
     padding: 8px 15px;
     transition: all 0.3s ease;
     font-family: "Bebas Neue", sans-serif;
@@ -49,47 +44,111 @@ nav ul li a {
 
 /* Hover */
 nav ul li a:hover {
-    background-color: #1E3D34; /* nền xanh rêu nhạt */
-    color: #D4B07A;           /* chữ vàng nhạt */
+    background-color: #1E3D34;
+    color: #D4B07A;
 }
 
+nav ul li a.active {
+    color: #d4b07a;
+    font-weight: bold;
+    border-bottom: 2px solid #d4b07a;
+}
+
+/* Logo */
 #logo {
     height: 30px;
-    width: cover;
+    width: auto;
     padding: 0 10px;
     position: fixed;
-    top: 10px; /* cách top 10px */
-    left: 50%; /* canh giữa ngang */
+    top: 10px;
+    left: 50%;
     transform: translateX(-50%);
     background-color: #0F2E25;
-    z-index: 998;
-
-    /* Chỉ bo góc trên trái và trên phải */
-    border-top-left-radius: 5px;   /* điều chỉnh bán kính theo ý muốn */
+    z-index: 1000;
+    border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
     color: whitesmoke;
 }
 
-#logo-text{
+#logo-text {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
-    font-style: normal;
     font-size: 1rem;
 }
 
-nav ul li a.active {
-  color: #d4b07a;     /* đổi màu chữ */
-  font-weight: bold;  /* chữ đậm */
-  border-bottom: 2px solid #d4b07a; /* gạch dưới */
+.menu-toggle{
+    display: none;
 }
 
+/* =========================== */
+/* Responsive tablet/mobile    */
+/* =========================== */
+@media (max-width: 1200px) {
+    nav {
+        width: cover;
+        padding: 8px 12px;
+        z-index: 1000;
+    }
+    nav ul {
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    #logo-text {
+        font-size: 0.9rem;
+    }
+}
 
-html {
-  scroll-behavior: smooth;
+/* Mobile nhỏ - dùng hamburger */
+@media (max-width: 600px) {
+    nav {
+        width: 95%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 6px 10px;
+    }
+
+    /* Ẩn menu mặc định */
+    nav ul {
+        position: absolute;
+        top: 43px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #0F2E25;
+        display: none;
+        gap: 5px;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+    }
+    nav ul li{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    /* Hamburger button */
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+        z-index: 1001;
+    }
 }

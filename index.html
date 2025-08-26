@@ -23,7 +23,8 @@
     <meta property="og:title" content="HOAN'S PORTFOLIO">
 
     <!-- Mô tả hiển thị -->
-    <meta property="og:description" content="Explore my coding journey through projects, skills, and creative ideas in technology.">
+    <meta property="og:description"
+        content="Explore my coding journey through projects, skills, and creative ideas in technology.">
 
     <!-- URL của trang (nên dùng URL đầy đủ) -->
     <meta property="og:url" content="https://dodanghoan.id.vn/">
@@ -41,7 +42,10 @@
         <h2 id="logo-text">INSIDE THE STORM</h2>
     </div>
     <nav>
-        <ul>
+        <div class="menu-toggle" id="menu-toggle">
+            &#9776; <!-- hamburger icon -->
+        </div>
+        <ul id="nav-list">
             <li><a href="#section1">About Me</a></li>
             <li><a href="#section2">Education</a></li>
             <li><a href="#section3">Experience</a></li>
@@ -50,6 +54,7 @@
             <li><a href="#section6">Contact</a></li>
         </ul>
     </nav>
+
     <img id="card_index" src="assets/card.png" alt="card_index" width="40%">
     <!-- <div style="background-color: #0F2E25; width: 100px; height: 100px;"></div>
     <div style="background-color: #1E3D34; width: 100px; height: 100px;"></div>
@@ -191,25 +196,35 @@
             <div class="projects-sidebar">
                 <h2>My Projects</h2>
             </div>
-
             <!-- Nội dung phải -->
             <div class="projects-content">
                 <!-- Game -->
                 <div class="project-category">
                     <h3>Game</h3>
                     <div class="project-list">
-                        <div class="project-card">
-                            <img src="https://picsum.photos/300/200?random=1" alt="Game Project 1">
-                            <p class="project-title">Game Project 1</p>
-                        </div>
-                        <div class="project-card">
-                            <img src="https://picsum.photos/300/200?random=2" alt="Game Project 2">
-                            <p class="project-title">Game Project 2</p>
-                        </div>
-                        <div class="project-card">
-                            <img src="https://picsum.photos/300/200?random=3" alt="Game Project 3">
-                            <p class="project-title">Game Project 3</p>
-                        </div>
+                        <!-- Card bình thường, popup sẽ mở video -->
+                        <a href="#" class="card" data-type="video" data-src="assets/avoid.mp4" data-title="AVOID!"
+                            data-purpose="Dodge obstacles game" data-role="Developer" data-language="C#"
+                            data-framework="Unity" data-tools="Unity Editor" data-project="Avoid Game"
+                            data-challenges="Implement smooth controls" data-lessons="Learned Unity physics">
+                            <img src="assets/avoid.png" alt="AVOID!" class="card__img">
+                            <span class="card__footer">
+                                <span>AVOID!</span>
+                                <span>Unity</span>
+                            </span>
+                        </a>
+
+                        <a href="#" class="card" data-type="video" data-src="assets/gotothemoon.mp4"
+                            data-title="GO TO THE MOON" data-purpose="Space exploration game" data-role="Developer"
+                            data-language="GDScript" data-framework="Godot" data-tools="Godot Editor"
+                            data-project="Moon Game" data-challenges="Gravity simulation"
+                            data-lessons="Learned Godot physics">
+                            <img src="assets/gotothemoon.png" alt="GO TO THE MOON" class="card__img">
+                            <span class="card__footer">
+                                <span>GO TO THE MOON</span>
+                                <span>Godot</span>
+                            </span>
+                        </a>
                     </div>
                 </div>
 
@@ -217,18 +232,21 @@
                 <div class="project-category">
                     <h3>Web</h3>
                     <div class="project-list">
-                        <div class="project-card">
-                            <img src="https://picsum.photos/300/200?random=4" alt="Web Project 1">
-                            <p class="project-title">Web Project 1</p>
-                        </div>
-                        <div class="project-card">
-                            <img src="https://picsum.photos/300/200?random=5" alt="Web Project 2">
-                            <p class="project-title">Web Project 2</p>
-                        </div>
-                        <div class="project-card">
-                            <img src="https://picsum.photos/300/200?random=6" alt="Web Project 3">
-                            <p class="project-title">Web Project 3</p>
-                        </div>
+
+                        <a href="#" class="card" data-title="Web Project 1"
+                            data-img="https://picsum.photos/300/200?random=4"
+                            data-purpose="Create a responsive portfolio website." data-role="Frontend Developer"
+                            data-language="JavaScript" data-framework="ReactJS"
+                            data-tools="VSCode, Git, Chrome DevTools" data-project="Avoid Game"
+                            data-challenges="Making responsive layouts across devices."
+                            data-lessons="Learned React components and responsive design.">
+                            <img src="https://picsum.photos/300/200?random=4" alt="Web Project 1" class="card__img">
+                            <span class="card__footer">
+                                <span>Web Project 1</span>
+                                <span>ReactJS</span>
+                            </span>
+                        </a>
+
                     </div>
                 </div>
 
@@ -236,20 +254,43 @@
                 <div class="project-category">
                     <h3>App</h3>
                     <div class="project-list">
-                        <div class="project-card">
-                            <img src="https://picsum.photos/300/200?random=7" alt="App Project 1">
-                            <p class="project-title">App Project 1</p>
-                        </div>
-                        <div class="project-card">
-                            <img src="https://picsum.photos/300/200?random=8" alt="App Project 2">
-                            <p class="project-title">App Project 2</p>
-                        </div>
-                        <div class="project-card">
-                            <img src="https://picsum.photos/300/200?random=9" alt="App Project 3">
-                            <p class="project-title">App Project 3</p>
-                        </div>
+
+                        <a href="#" class="card" data-title="App Project 1"
+                            data-img="https://picsum.photos/300/200?random=7"
+                            data-purpose="Build a mobile productivity app." data-role="Mobile Developer"
+                            data-language="Dart" data-framework="Flutter" data-tools="Flutter, Android Studio"
+                            data-project="Avoid Game" data-challenges="Handling state management and navigation."
+                            data-lessons="Learned Flutter widgets and state management patterns.">
+                            <img src="https://picsum.photos/300/200?random=7" alt="App Project 1" class="card__img">
+                            <span class="card__footer">
+                                <span>App Project 1</span>
+                                <span>Flutter</span>
+                            </span>
+                        </a>
+
                     </div>
                 </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Popup -->
+    <div id="project-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div class="popup-left">
+                <!-- Media sẽ chèn vào đây -->
+            </div>
+            <div class="popup-right">
+                <h2 id="popup-title"></h2>
+                <p><strong>Purpose:</strong> <span id="popup-purpose"></span></p>
+                <p><strong>Role:</strong> <span id="popup-role"></span></p>
+                <p><strong>Language:</strong> <span id="popup-language"></span></p>
+                <p><strong>Framework:</strong> <span id="popup-framework"></span></p>
+                <p><strong>Tools:</strong> <span id="popup-tools"></span></p>
+                <p><strong>Project:</strong> <span id="popup-project"></span></p>
+                <p><strong>Challenges:</strong> <span id="popup-challenges"></span></p>
+                <p><strong>Lessons:</strong> <span id="popup-lessons"></span></p>
             </div>
         </div>
     </div>
@@ -280,6 +321,7 @@
     <script src="section1.js"></script>
     <script src="section2.js"></script>
     <script src="section3.js"></script>
+    <script src="section5.js"></script>
 </body>
 
 </html>

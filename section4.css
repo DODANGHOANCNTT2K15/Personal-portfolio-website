@@ -84,3 +84,99 @@
   height: 22px;
   object-fit: contain;
 }
+
+/* =========================== */
+/* Responsive cho tablet/mobiles */
+/* =========================== */
+@media (max-width: 1024px) {
+    #section4 h2 {
+        font-size: 40px;
+    }
+
+    #section4 .skills-grid {
+        gap: 20px;
+        max-width: 700px;
+    }
+
+    #section4 .skill-category {
+        padding: 20px;
+    }
+
+    #section4 .skill-category h3 {
+        font-size: 24px;
+    }
+
+    #section4 .skill-category li {
+        font-size: 15px;
+        padding: 6px 12px;
+        gap: 6px;
+    }
+
+    #section4 .skill-category li img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #section4 h2 {
+        font-size: 32px;
+    }
+
+    #section4 .skills-grid {
+        gap: 18px;
+    }
+
+    #section4 .skill-category {
+        padding: 18px;
+    }
+
+    #section4 .skill-category h3 {
+        font-size: 22px;
+    }
+
+    #section4 .skill-category li {
+        font-size: 14px;
+        padding: 5px 10px;
+        gap: 5px;
+    }
+
+    #section4 .skill-category li img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #section4 h2 {
+        font-size: 26px;
+    }
+
+    #section4 .skills-grid {
+        gap: 15px;
+    }
+
+    #section4 .skill-category {
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    #section4 .skill-category h3 {
+        font-size: 20px;
+    }
+
+    #section4 .skill-category ul {
+        gap: 8px;
+    }
+
+    #section4 .skill-category li {
+        font-size: 13px;
+        padding: 4px 8px;
+        gap: 4px;
+    }
+
+    #section4 .skill-category li img {
+        width: 16px;
+        height: 16px;
+    }
+}
