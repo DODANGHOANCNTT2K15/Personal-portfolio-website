@@ -63,7 +63,11 @@ document.querySelectorAll("nav ul li a").forEach(link => {
     e.preventDefault();
     const id = link.getAttribute("href").substring(1);
     const target = document.getElementById(id);
-    if (target) smoothScrollTo(target, 180); // 180ms = 0.18s
+
+    if (target) smoothScrollTo(target, 180);
+
+    // Khi click xong thì ẩn menu
+    navList.classList.remove('active');
   });
 });
 
@@ -72,5 +76,6 @@ const toggle = document.getElementById('menu-toggle');
 const navList = document.getElementById('nav-list');
 
 toggle.addEventListener('click', () => {
-    navList.classList.toggle('active');
+  navList.classList.toggle('active');
 });
+
