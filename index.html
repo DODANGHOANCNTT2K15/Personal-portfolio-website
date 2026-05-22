@@ -96,9 +96,9 @@
             <img src="assets/phenikaa_university.png" alt="Phenikaa University">
         </div>
     </div>
-    <div id="section3" class="section">
+    <!-- <div id="section3" class="section">
         <div class="fade-item">
-            <!-- <img src="assets/meocry.png" alt="Experience" class="fade-item"> -->
+           <img src="assets/meocry.png" alt="Experience" class="fade-item">
              
         </div>
         <div>
@@ -109,6 +109,74 @@
                 personal projects as well as during my studies.
             </p>
         </div>
+    </div> -->
+    <div id="section3" class="section">
+        <!-- NODES -->
+        <div class="experience-timeline">
+
+            <div class="exp-node active" data-target="nukeviet">
+                <span class="node-label">Vinades (May 2025 - July 2025)</span>
+                <span class="node-dot"></span>
+            </div>
+
+            <div class="exp-node" data-target="jobapp">
+                <span class="node-label">Job App (Expected 2026)</span>
+                <span class="node-dot"></span>
+            </div>
+
+            <div class="exp-node" data-target="future">
+                <span class="node-label">Future (Expected 2027)</span>
+                <span class="node-dot"></span>
+            </div>
+
+        </div>
+
+        <!-- HIDDEN DATA FOR POPUP -->
+        <div class="experience-data" id="nukeviet">
+
+            <div class="left-side">
+                <img src="assets/vinades.png" alt="Vinades">
+            </div>
+
+            <div class="intern-box">
+                <h2>Vinades</h2>
+                <p><strong>Position:</strong> Intern Developer</p>
+                <p><strong>Duration:</strong> May 2025 - July 2025</p>
+                <p><strong>Project:</strong> Develop a hospital management module with NukeViet.</p>
+                <p><strong>What I Learned:</strong> Learned teamwork, backend/frontend workflow, how to build/manage
+                    admin dashboards, and working with modular architecture. </p>
+            </div>
+
+        </div>
+
+        <div class="experience-data" id="jobapp">
+
+            <div class="intern-box">
+                <h2>Job Application Journey</h2>
+                <p>Preparing portfolio projects and improving fullstack skills.</p>
+                <p>Currently focusing on Vue.js, Express.js, SQL Server, and UI/UX development.</p>
+            </div>
+
+        </div>
+
+        <div class="experience-data" id="future">
+
+            <div class="intern-box">
+                <h2>Future Goals</h2>
+                <p>Become a fullstack developer and create real-world applications.</p>
+            </div>
+
+        </div>
+
+        <div class="experience-popup-overlay" id="experiencePopup">
+            <div class="popup-card">
+                <button class="popup-close" id="popupClose">×</button>
+                <div class="popup-content" id="popupContent"></div>
+            </div>
+        </div>
+
+        <!-- TITLE -->
+        <h1 class="big-title">EXPERIENCE</h1>
     </div>
     <div id="section4" class="section">
         <h2>Skills</h2>
@@ -141,6 +209,20 @@
                             alt="Python">
                         Python
                     </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-plain.svg"
+                            alt="Vue.js">
+                        Vue.js
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                        PHP
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+                            alt="SQL Server" width="24" height="24" style="vertical-align: middle; margin-right: 8px;">
+                        SQL Server
+                    </li>
                 </ul>
             </div>
             <!-- Soft Skills -->
@@ -149,7 +231,8 @@
                 <ul>
                     <li>Teamwork</li>
                     <li>Problem Solving</li>
-                    <li>Time Management</li>
+                    <li>Vide Coding</li>
+                    <li></li>
                 </ul>
             </div>
 
@@ -238,11 +321,35 @@
                     <h3>Web</h3>
                     <div class="project-list">
 
+                        <a href="#" class="card" data-type="img" data-src="assets/youtubetomusic.png"
+                            data-title="Youtube to music local" data-purpose="Convert YouTube videos to local music files"
+                            data-role="Fullstack Developer" data-language="English" data-framework="FLASK"
+                            data-tools="VS CODE" data-project="https://github.com/DODANGHOANCNTT2K15/youtube-to-music.git" data-challenges="API integration, video processing"
+                            data-lessons="Learned Flask, REST API development, video processing">
+                            <img src="assets/youtubetomusic.png" alt="Youtube to music local" class="card__img">
+                            <span class="card__footer">
+                                <span>YOUTUBE TO MUSIC LOCAL</span>
+                                <span>FLASK</span>
+                            </span>
+                        </a>
+
+                        <a href="#" class="card" data-type="img" data-src="assets/nukeviet01.png" id="target-card"
+                            data-title="Hospital Management Module" data-purpose="Develop a hospital management module using existing resources from the NukeViet system."
+                            data-role="Team Leader" data-language="English" data-framework="PHP"
+                            data-tools="VS CODE, XAMPP" data-project="https://github.com/DODANGHOANCNTT2K15/Vinades-hospital-management-module.git" data-challenges="Team management, learning PHP, working with legacy code"
+                            data-lessons="PHP, SQL, teamwork, admin dashboard design, working with legacy code, and understanding the NukeViet system, learned how to build/manage admin dashboards, and working with modular architecture.">
+                            <img src="assets/nukeviet00.png" alt="Portfolio" class="card__img">
+                            <span class="card__footer">
+                                <span>HOSPITAL MANAGEMENT</span>
+                                <span>PHP</span>
+                            </span>
+                        </a>
+
                         <a href="#" class="card" data-type="video" data-src="assets/portfolio.mp4"
-                            data-title="PORTFOLIO" data-purpose="Personal portfolio website"
-                            data-role="Frontend Developer" data-language="HTML, CSS, JS" data-framework="NO"
-                            data-tools="VS CODE" data-project="dodanghoan.id.vn" data-challenges="Responsive design"
-                            data-lessons="Learned web development, html, css, js, responsive">
+                            data-title="Portfolio" data-purpose="Personal portfolio website"
+                            data-role="Frontend Developer" data-language="English" data-framework="NO"
+                            data-tools="VS CODE" data-project="https://dodanghoan.id.vn" data-challenges="Responsive design, effects and animations, css grid and flexbox, and overall design and layout"
+                            data-lessons="Learned web development, html, css, js, responsive, and how to create a personal portfolio website.">
                             <img src="assets/protfolio.png" alt="Portfolio" class="card__img">
                             <span class="card__footer">
                                 <span>PORTFOLIO</span>
@@ -251,29 +358,28 @@
                         </a>
 
                         <a href="#" class="card" data-type="video" data-src="assets/Rocket.mp4" data-title="Rocket"
-                            data-purpose="Learn toeic online" data-role="Frontend Developer"
-                            data-language="HTML, CSS, JS" data-framework="Vuejs" data-tools="VS CODE"
+                            data-purpose="Learn how to design and build frontends according to the design principles." data-role="Frontend Developer"
+                            data-language="Vietnamese" data-framework="Vuejs" data-tools="VS CODE"
                             data-project="https://github.com/DODANGHOANCNTT2K15/Interdisciplinary-project.git"
                             data-challenges="New Framework" data-lessons="Learned Framework Vuejs">
                             <img src="assets/webtienganh.png" alt="Rocket" class="card__img">
                             <span class="card__footer">
                                 <span>LEARN TOIEC ONLINE</span>
-                                <span>Vuejs</span>
+                                <span>VUEJS</span>
                             </span>
                         </a>
 
                         <a href="#" class="card" data-type="image" data-src="assets/webbansach.png"
                             data-title="PlayBook" data-purpose="E-commerce" data-role="Frontend Developer"
-                            data-language="HTML, CSS, JS" data-framework="Vuejs" data-tools="VS CODE"
+                            data-language="Vietnamese" data-framework="PHP" data-tools="VS CODE"
                             data-project="https://github.com/DODANGHOANCNTT2K15/N06-PTTKPM-NHOM-08.git"
-                            data-challenges="New Framework" data-lessons="Learned Framework Vuejs">
+                            data-challenges="New Framework" data-lessons="Learned Framework PHP">
                             <img src="assets/webbansach.png" alt="Rocket" class="card__img">
                             <span class="card__footer">
                                 <span>BOOK SELLING WEBSITE</span>
-                                <span>Vuejs</span>
+                                <span>PHP</span>
                             </span>
                         </a>
-
                     </div>
                 </div>
 
@@ -290,9 +396,22 @@
                             data-framework="Vuejs" data-tools="VS CODE"
                             data-project="https://github.com/DODANGHOANCNTT2K15/HumanResourceManagement.git"
                             data-challenges="C# .Net" data-lessons="C# .Net">
-                            <img src="assets/xCompany.png" alt="Rocket" class="card__img">
+                            <img src="assets/xCompany.png" alt="Human Resource Management" class="card__img">
                             <span class="card__footer">
                                 <span>HumanResourceManagement</span>
+                                <span>C# .Net</span>
+                            </span>
+                        </a>
+
+                        <a href="#" class="card" data-type="image" data-src="assets/menubarlikemac.png"
+                            data-title="MenuBar Like Mac" data-purpose="Personal project" data-role="Developer"
+                            data-language="English"
+                            data-framework="C# .Net" data-tools="VS CODE"
+                            data-project="https://github.com/DODANGHOANCNTT2K15/custom-window-C-Sharp.git"
+                            data-challenges="C# .Net" data-lessons="Interacting with windows API, C# .Net">
+                            <img src="assets/menubarlikemac.png" alt="MenuBar Like Mac" class="card__img">
+                            <span class="card__footer">
+                                <span>MenuBar Like Mac</span>
                                 <span>C# .Net</span>
                             </span>
                         </a>
@@ -317,7 +436,7 @@
                 <p><strong>Language:</strong> <span id="popup-language"></span></p>
                 <p><strong>Framework:</strong> <span id="popup-framework"></span></p>
                 <p><strong>Tools:</strong> <span id="popup-tools"></span></p>
-                <p><strong>Project:</strong> <span id="popup-project"></span></p>
+                <p><strong>Project:</strong> <a href="#" id="popup-project" target="_blank">Link</a></p>
                 <p><strong>Challenges:</strong> <span id="popup-challenges"></span></p>
                 <p><strong>Lessons:</strong> <span id="popup-lessons"></span></p>
             </div>
@@ -336,26 +455,12 @@
             <a href="https://github.com/DODANGHOANCNTT2K15" target="_blank">
                 <img src="assets/github.png" alt="GitHub">
             </a>
+            <a href="https://dodanghoan.itch.io/" target="_blank">
+                <img src="assets\itchio-textless-black.svg" alt="Itch.io" width="28" height="28" style="vertical-align: middle;">
+            </a>
             <a href="https://www.linkedin.com/in/hoan-do-dang-8a8640312/" target="_blank">
                 <img src="assets/linkedin.png" alt="LinkedIn">
             </a>
-        </div>
-    </div>
-    <div id="div_2th9">
-        <!-- Hình ảnh -->
-        <img src="assets/2th9.png" alt="2th9" width="100%">
-
-        <!-- Trình phát nhạc -->
-        <audio id="myAudio" autoplay loop>
-            <source src="assets/nhac2th9.mp3" type="audio/mpeg" autoplay loop>
-            Trình duyệt của bạn không hỗ trợ audio.
-        </audio>
-
-        <!-- Nút mute/unmute -->
-        <div class="music-controls">
-            <button id="muteBtn">
-                <i class="fa-solid fa-volume-high"></i>
-            </button>
         </div>
     </div>
     <footer
@@ -368,7 +473,6 @@
     <script src="section2.js"></script>
     <script src="section3.js"></script>
     <script src="section5.js"></script>
-    <script src="2th9.js"></script>
 </body>
 
 </html>

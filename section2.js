@@ -55,3 +55,4 @@ window.addEventListener("scroll", function () {
     gpaWrapper.classList.remove("animated");
   }
 });
+

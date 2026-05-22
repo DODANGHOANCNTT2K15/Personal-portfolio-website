@@ -183,8 +183,8 @@
 }
 
 @keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.8);}
-  to {opacity: 1; transform: scale(1);}
+  from {opacity: 0; transform: scale(0.8);} 
+  to {opacity: 1; transform: scale(1);} 
 }
 
 .popup-content {
@@ -288,3 +288,121 @@
         height: auto;
     }
 }
+
+/* --- Popup: Accessibility & Themed improvements (overrides) --- */
+.popup {
+  /* let JS control display (don't force visible) */
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 17, 12, 0.55);
+}
+
+.popup-content {
+  background: linear-gradient(180deg, #ffffff 0%, #f6fbf6 100%);
+  border: 1px solid rgba(15,138,95,0.12);
+  box-shadow: 0 30px 60px rgba(15,46,37,0.18);
+  padding: 28px;
+  border-radius: 16px;
+  color: #222;
+  width: min(920px, 96%);
+  max-height: 86vh;
+  overflow: hidden;
+}
+
+.popup-content .close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0F8A5F;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-content .close:focus {
+  outline: 3px solid rgba(15,138,95,0.22);
+  outline-offset: 2px;
+}
+
+.popup-body {
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+.popup-left {
+  flex: 0 0 360px;
+}
+
+.popup-left img, .popup-left video {
+  width: 100%;
+  max-height: 420px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #e9f3ee;
+}
+
+.popup-right {
+  flex: 1 1 420px;
+  overflow-y: auto;
+  max-height: calc(86vh - 60px);
+  padding-right: 6px;
+}
+
+.popup-right h2 {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  color: #0F2E25;
+  line-height: 1.05;
+}
+
+.popup-right p,
+.popup-right span {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.popup-right .meta {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.popup-right strong {
+  color: #0F8A5F;
+  font-weight: 700;
+}
+
+.popup-right .project-link {
+  display: inline-block;
+  margin-top: 12px;
+  background: #0F8A5F;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Smaller screens: stack and relax sizes */
+@media (max-width: 768px) {
+  .popup-body { flex-direction: column; }
+  .popup-left { flex: 1 1 100%; }
+  .popup-right { flex: 1 1 100%; max-height: none; }
+  .popup-content { padding: 18px; }
+  .popup-content .close { top: 8px; right: 10px; }
+}
+
+/* Ensure focusability for keyboard users */
+.popup-content a:focus, .popup-content button:focus { outline: 3px solid rgba(15,138,95,0.18); outline-offset: 2px; }
+
